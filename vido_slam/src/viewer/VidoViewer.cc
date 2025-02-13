@@ -2,6 +2,8 @@
 #include "viewer/pangolin_header/rendertree.h"
 #include "viewer/pangolin_header/shader.h"
 #include <vector>
+#include "RecordOnRender.h"
+
 namespace VIDO_SLAM
 {
 MapViewer::MapViewer(const std::string &model_path,const std::string &font_path,const int width,const int height)
@@ -282,8 +284,9 @@ void MapViewer::Run() {
     }
 
     if (pangolin::Pushed(menuRecord)) {
-      pangolin::DisplayBase().RecordOnRender(
-          "ffmpeg:[fps=50,bps=8388608,unique_filename,flip=true]//apa-localization.mp4");
+      //pangolin::DisplayBase().RecordOnRender("ffmpeg:[fps=50,bps=8388608,unique_filename,flip=true]//apa-localization.mp4");
+      RecordOnRender("window");
+
     }
 
     if (menuDrawAxis) {

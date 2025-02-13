@@ -2,7 +2,7 @@
 
 # System parameters
 slam_mode: 0   #0:vo  1:vio
-image_path: /kitti/2011_09_26_drive_0032_sync/image_02/data
+image_path: /home/fyp/Downloads/2011_09_26/2011_09_26_drive_0001_sync/image_02/data
 imu_path: /kaist/urban39/urban39-pankyo/sensor_data/xsens_imu.csv
 start_index: 1
 
